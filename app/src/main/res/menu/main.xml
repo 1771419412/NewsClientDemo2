@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".activity.DetailsActivity">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/collection_item"
+        android:title="收藏"
+        android:icon="@drawable/ic_menu_favorite"
+
+        />
+    <item
+        android:id="@+id/share_item"
+        android:title="分享"
+        android:icon="@drawable/home_02"/>
+    </group>
+</menu>

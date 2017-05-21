@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_guide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.newsclientdemo.activity.GuideActivity">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/guide1"/>
+
+        <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/guide3"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/guide2"/>
+
+            <TextView
+                android:id="@+id/start_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginBottom="60dp"
+                android:text="开启旅行"
+                android:textSize="28sp"
+                android:textColor="#0000FF"
+                android:textStyle="italic"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ViewFlipper>
+
+
+</RelativeLayout>

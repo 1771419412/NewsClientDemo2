@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.newsclientdemo.activity.MyActivity">
+
+    <fragment
+        android:id="@+id/id_fragment_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:name="com.example.newsclientdemo.fragment.TitleFragment"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar_ly"
+        android:layout_below="@id/id_fragment_title"
+        android:text="我是视频"
+        android:background="@color/colorPrimary"/>
+
+    <include
+        android:id="@+id/bottom_bar_ly"
+        layout="@layout/button_bar_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
