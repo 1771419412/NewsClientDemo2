@@ -20,6 +20,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/reg_user"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="40dp"
@@ -28,8 +29,9 @@
             android:background="#88ffffff"
             android:drawableLeft="@mipmap/user_login"
             android:drawablePadding="10dp"
-            android:hint="手机号"/>
+            android:hint="用户名"/>
         <EditText
+            android:id="@+id/reg_password"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
@@ -38,22 +40,26 @@
             android:background="#88ffffff"
             android:drawableLeft="@mipmap/pw_login"
             android:drawablePadding="10dp"
+            android:inputType="textPassword"
             android:hint="密码"/>
 
         <EditText
+            android:id="@+id/reg_que_password"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="#88ffffff"
-            android:drawableLeft="@mipmap/pw_login"
+            android:drawableLeft="@mipmap/email"
             android:drawablePadding="10dp"
-            android:hint="确认密码"/>
+            android:inputType="textEmailAddress"
+            android:hint="邮箱"/>
 
 
 
         <Button
+            android:id="@+id/btn_reg"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="30dp"

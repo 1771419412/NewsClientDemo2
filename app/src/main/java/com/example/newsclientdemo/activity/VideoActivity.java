@@ -12,6 +12,8 @@ public class VideoActivity extends BaseActivity {
     private LinearLayout mTvMy;
     private LinearLayout mTvPaly;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

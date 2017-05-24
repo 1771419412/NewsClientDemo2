@@ -6,6 +6,9 @@ import android.util.Log;
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.TbsListener;
 
+import cn.bmob.v3.Bmob;
+import cn.sharesdk.framework.ShareSDK;
+
 /**
  * Created by 雪无痕 on 2017/5/20.
  */
@@ -13,11 +16,13 @@ import com.tencent.smtt.sdk.TbsListener;
 public class BaseApplication extends Application{
 
     private static BaseApplication instance;
+    private static final String APP_KEY = "1e1fc8d8da970";
 
     @Override
     public void onCreate() {
         super.onCreate();
-
+        Bmob.initialize(this, "16dd4015dd94e7586511a65d6972e9fc");
+        ShareSDK.initSDK(this, APP_KEY);
         instance = this;
         initTbs();
     }

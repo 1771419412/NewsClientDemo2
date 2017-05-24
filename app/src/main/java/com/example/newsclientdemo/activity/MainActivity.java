@@ -11,11 +11,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.newsclientdemo.R;
 import com.example.newsclientdemo.adapter.ContentFragmentAdapter;
+import com.example.newsclientdemo.fragment.BaseFragment;
 import com.example.newsclientdemo.fragment.NewsFragment;
 
 import java.util.ArrayList;
@@ -31,8 +33,12 @@ public class MainActivity extends BaseActivity{
     private TextView mTitle;
 
 
+
+
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+
+    private FrameLayout mFrameLayout;
 
 
     private TabLayout mTabFragmentTitle;
@@ -46,6 +52,7 @@ public class MainActivity extends BaseActivity{
     private List<Fragment> mFragmentList;
     private int mPosition;
     private Fragment mFragment;
+    private BaseFragment mBf;
 
 
     @Override
@@ -58,13 +65,71 @@ public class MainActivity extends BaseActivity{
         initFragmentArrayList();
         initTitleList();
         initTabLayout();
+
         initNavigationView();
+        /*initFragment();*/
+       /* setFragment();*/
         mTitle= (TextView) findViewById(R.id.title_tv);
         mTitle.setText("新闻专场");
 
 
     }
 
+    /*private void setFragment() {
+        mPosition=0;
+        //根据位置得到对应的fragment
+        Fragment toFragment = getFragment();
+        //切换fragment
+        //  switchFragment(toFragment); 会导致每次切换fragment切换都重新初始化
+        switchContent(mFragment,toFragment);
+    }*/
+
+    /*private void initFragment() {
+        mFragmentList=new ArrayList<>();
+        mBf = new BaseFragment();
+        MyFragment myFragment=new MyFragment();
+        mFragmentList.add(mBf);
+        mFragmentList.add(myFragment);
+
+        FragmentManager fm=getSupportFragmentManager();
+        FragmentTransaction ft=fm.beginTransaction();
+        ft.add(R.id.framelayout_content, mBf);
+    }*/
+
+    //根据位置得到对应的fragment
+  /* private Fragment getFragment() {
+        Fragment fragment = mFragmentList.get(mPosition);
+        return fragment;
+    }*/
+
+
+    /*public void switchContent(Fragment fromFragment, Fragment toFragment) {
+        if(fromFragment != toFragment){
+            mFragment = toFragment;
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            if(!toFragment.isAdded()){
+                //toFragment没有被添加
+                //1.先隐藏fromFragment
+                if(fromFragment != null){
+                    ft.hide(fromFragment);
+                }
+                //2.再添加toFragment
+                if(toFragment != null){
+                    ft.add(R.id.framelayout_content,toFragment).commit();
+                }
+            }else{
+                //toFragment已被添加
+                //1.先隐藏fromFragment
+                if(fromFragment != null){
+                    ft.hide(fromFragment);
+                }
+                //2.再显示toFragment
+                if(toFragment != null){
+                    ft.show(toFragment).commit();
+                }
+            }
+        }
+    }*/
 
 
 
@@ -121,9 +186,10 @@ public class MainActivity extends BaseActivity{
 
         switch (v.getId()) {
             case R.id.tv_home:
-                goTo(MainActivity.class);
+               goTo(MainActivity.class);
                 finish();
 
+                mTvHome.setSelected(true);
                 break;
 
             case R.id.tv_bbs:
@@ -144,7 +210,13 @@ public class MainActivity extends BaseActivity{
 
                 break;
 
+
         }
+        //根据位置得到对应的fragment
+        //Fragment toFragment = getFragment();
+        //切换fragment
+        //  switchFragment(toFragment); 会导致每次切换fragment切换都重新初始化
+        //switchContent(mFragment,toFragment);
 
 
     }
@@ -155,6 +227,7 @@ public class MainActivity extends BaseActivity{
 
         mContentFragmentAdapter = new ContentFragmentAdapter(getSupportFragmentManager(), mContentFragmentList, mTitleList);
         mVpFragmentPager.setAdapter(mContentFragmentAdapter);
+        mVpFragmentPager.setOffscreenPageLimit(8     );
         mTabFragmentTitle.setupWithViewPager(mVpFragmentPager);
     }
 

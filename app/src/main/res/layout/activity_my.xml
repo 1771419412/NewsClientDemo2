@@ -47,7 +47,7 @@
                 android:gravity="center"
                 android:text="点击登录"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"/>
+                android:textSize="24sp"/>
         </LinearLayout>
 
 
@@ -74,6 +74,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:textSize="18sp"
                 android:text="历史记录"
                 />
         </LinearLayout>
@@ -103,6 +104,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:textSize="18sp"
                 android:text="历史记录"
                 />
         </LinearLayout>
@@ -131,6 +133,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:textSize="18sp"
                 android:text="历史记录"
                 />
         </LinearLayout>
@@ -159,12 +162,14 @@
                 android:src="@drawable/star_01"/>
 
             <TextView
+                android:id="@+id/collection_login"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="历史记录"
+                android:textSize="18sp"
+                android:text="我的收藏"
                 />
         </LinearLayout>
 
@@ -190,15 +195,17 @@
                 android:layout_height="45dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
-                android:src="@drawable/swallow_01"/>
+                android:src="@drawable/comment"/>
 
             <TextView
+                android:id="@+id/comment_login"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="历史记录"
+                android:textSize="18sp"
+                android:text="我的评论"
                 />
         </LinearLayout>
 
@@ -220,15 +227,17 @@
                 android:layout_height="45dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
-                android:src="@drawable/book_01"/>
+                android:src="@drawable/cancel"/>
 
             <TextView
+                android:id="@+id/out_login"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="历史记录"
+                android:textSize="18sp"
+                android:text="退出登录"
                 />
         </LinearLayout>
 

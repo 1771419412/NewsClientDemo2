@@ -8,16 +8,92 @@
     tools:context="com.example.newsclientdemo.activity.DetailsActivity">
 
 
+    <RelativeLayout
+        android:id="@+id/collection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFFFF">
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@mipmap/back_01"/>
 
 
+
+        <ImageView
+            android:id="@+id/image_btn_collection"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@mipmap/collcation_01"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"/>
+
+
+
+    </RelativeLayout>
 
 
     <com.tencent.smtt.sdk.WebView
-        android:layout_below="@+id/id_fragment_title"
         android:id="@+id/web_context"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@+id/collection_layout"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFFFF"
+        android:layout_alignParentBottom="true">
 
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/paintbrush"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="写评论"
+            android:imeOptions="actionSend"
+            android:inputType="text"/>
+
+        <ImageButton
+            android:clickable="false"
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/comment_02"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            />
+
+
+        <ImageButton
+            android:id="@+id/share_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:background="@mipmap/share"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_fasong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"/>
+
+
+
+
+
+    </LinearLayout>
 </RelativeLayout>

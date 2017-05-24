@@ -17,6 +17,12 @@ import com.example.newsclientdemo.data.NewsData;
 
 import java.util.List;
 
+import static com.example.newsclientdemo.activity.DetailsActivity.DATE_EXTRA;
+import static com.example.newsclientdemo.activity.DetailsActivity.KEY_EXTRA;
+import static com.example.newsclientdemo.activity.DetailsActivity.TITLE_EXTRA;
+import static com.example.newsclientdemo.activity.DetailsActivity.TYPE_EXTRA;
+import static com.example.newsclientdemo.activity.DetailsActivity.URL_EXTRA;
+
 /**
  * Created by 雪无痕 on 2017/5/18.
  */
@@ -25,6 +31,7 @@ public class BaseNewstAdapter extends RecyclerView.Adapter<BaseNewstAdapter.View
     private List<NewsData.ResultBean.NewsDataBase> mNewsList;
     private Context mContext;
     private LayoutInflater mLayoutInflater;
+
 
 
     public BaseNewstAdapter(List<NewsData.ResultBean.NewsDataBase> newsList, Context context) {
@@ -55,7 +62,11 @@ public class BaseNewstAdapter extends RecyclerView.Adapter<BaseNewstAdapter.View
             public void onClick(View v) {
 
                 Intent intent=new Intent(mContext, DetailsActivity.class);
-                intent.putExtra("url",mNewsList.get(position).getUrl());
+                intent.putExtra(URL_EXTRA,mNewsList.get(position).getUrl());
+                intent.putExtra(KEY_EXTRA,mNewsList.get(position).getUniquekey());
+                intent.putExtra(TITLE_EXTRA,mNewsList.get(position).getTitle());
+                intent.putExtra(TYPE_EXTRA,mNewsList.get(position).getAuthor_name());
+                intent.putExtra(DATE_EXTRA,mNewsList.get(position).getDate());
                 mContext.startActivity(intent);
 
             }

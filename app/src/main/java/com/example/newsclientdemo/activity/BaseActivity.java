@@ -4,16 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 
 import com.example.newsclientdemo.R;
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+    private TextView mLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-        /*Bmob.initialize(this,"16dd4015dd94e7586511a65d6972e9fc");*/
+
+    }
+
+
+
+
+    //隐藏软件盘
+    public void hideKeyboard() {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
     }
 
     @Override

@@ -112,8 +112,8 @@ public class ReadActivity extends BaseActivity {
             public void run() {
                 super.run();
                 try {
-                    //获取连接
-                    Connection connection= Jsoup.connect("http://www.zongheng.com/category/3.html");
+                    //获取连接http://www.zongheng.com/category/3.html    http://book.zongheng.com/category/1.html
+                    Connection connection= Jsoup.connect("http://book.zongheng.com/category/1.html");
                     //设置超时
 
                     connection.timeout(10000);
