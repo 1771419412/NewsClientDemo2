@@ -86,7 +86,7 @@
             android:layout_marginRight="10dp"
 
             android:textColor="@android:color/darker_gray"
-            android:text="-------------------------------第三方登录-------------------------------"/>
+            android:text="-------------第三方登录-------------"/>
 
     </LinearLayout>
 

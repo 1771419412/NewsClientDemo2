@@ -38,7 +38,7 @@ dependencies {
     compile 'org.jsoup:jsoup:1.10.2'
     //解决依赖冲突
     compile 'cn.bmob.android:bmob-sdk:3.5.0'
-    compile 'com.google.code.gson:gson:2.8.0'
+    //compile 'com.google.code.gson:gson:2.8.0'
     compile files('libs/MobCommons-2017.0412.1554.jar')
     compile files('libs/MobTools-2017.0412.1554.jar')
     compile files('libs/ShareSDK-Core-2.8.3.jar')

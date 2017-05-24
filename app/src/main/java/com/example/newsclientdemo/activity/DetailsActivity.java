@@ -50,6 +50,8 @@ public class DetailsActivity extends BaseActivity {
     private TextView mTvFa;
     private ImageView mIsCollection;
 
+    private ImageView mBackImageView;
+
 
     public static final String URL_EXTRA = "URL_EXTRA";
     public static final String KEY_EXTRA = "KEY_EXTRA";
@@ -103,6 +105,13 @@ public class DetailsActivity extends BaseActivity {
     }
 
     private void initViews() {
+        mBackImageView= (ImageView) findViewById(R.id.back_image);
+        mBackImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mEdtComment = (EditText) findViewById(R.id.edt_comment);
         mBtnImageComment = (ImageButton) findViewById(R.id.tv_comment);
         mBtmShareComment= (ImageButton) findViewById(R.id.share_comment);
