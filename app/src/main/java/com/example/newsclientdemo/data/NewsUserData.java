@@ -36,6 +36,7 @@ public class NewsUserData extends BmobObject{
 
     public void setUsername(String username) {
         this.username = username;
+
     }
 
     public String getTitle() {

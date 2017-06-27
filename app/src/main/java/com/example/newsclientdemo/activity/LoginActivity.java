@@ -79,13 +79,13 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void done(BmobUser user, BmobException e) {
                         if(user!=null){
-                            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                            Intent intent=new Intent(LoginActivity.this,MyActivity.class);
+                            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                             //用Bundle携带数据
                             Bundle bundle=new Bundle();
                             bundle.putString("username",username);
                             intent.putExtras(bundle);
                             startActivity(intent);
+                            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                         else {

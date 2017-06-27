@@ -10,19 +10,20 @@
     tools:context="com.example.newsclientdemo.activity.MainActivity">
 
 
-
-    <RelativeLayout
-
+    <LinearLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         >
-        <include
-            android:id="@+id/id_title"
+        <android.support.v4.view.ViewPager
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            layout="@layout/fragment_title"
-            />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/top_pager">
+
+        </android.support.v4.view.ViewPager>
+
 
         <include
             android:id="@+id/bottom_bar_ly"
@@ -33,44 +34,8 @@
             />
 
 
-        <FrameLayout
-            android:id="@+id/framelayout_content"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_above="@id/bottom_bar_ly"
-            android:layout_below="@+id/id_title"
-            >
+    </LinearLayout>
 
-          <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/tab_FindFragment_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    app:tabIndicatorColor="@android:color/white"
-                    app:tabMode="scrollable"
-                    app:tabSelectedTextColor="@android:color/darker_gray"
-                    app:tabTextColor="@android:color/white"
-                    />
-
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/vp_FindFragment_pager"
-                    android:layout_width="fill_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-
-    </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

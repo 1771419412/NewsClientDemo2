@@ -1,10 +1,11 @@
 package com.example.newsclientdemo.application;
 
-import android.app.Application;
 import android.util.Log;
 
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.TbsListener;
+
+import org.litepal.LitePalApplication;
 
 import cn.bmob.v3.Bmob;
 import cn.sharesdk.framework.ShareSDK;
@@ -13,7 +14,7 @@ import cn.sharesdk.framework.ShareSDK;
  * Created by 雪无痕 on 2017/5/20.
  */
 
-public class BaseApplication extends Application{
+public class BaseApplication extends LitePalApplication{
 
     private static BaseApplication instance;
     private static final String APP_KEY = "1e1fc8d8da970";

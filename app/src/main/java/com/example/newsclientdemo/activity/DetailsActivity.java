@@ -81,6 +81,8 @@ public class DetailsActivity extends BaseActivity {
 
     }
 
+
+
     private void query() {
         String bql = "select * from CollectionData";
         BmobQuery<CollectionData> query=new BmobQuery<CollectionData>();
@@ -325,6 +327,7 @@ public class DetailsActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
             case R.id.collection_item:
                 Toast.makeText(this, "You clicked Add", Toast.LENGTH_SHORT).show();

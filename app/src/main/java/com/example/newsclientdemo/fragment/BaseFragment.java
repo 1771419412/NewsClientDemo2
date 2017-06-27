@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.newsclientdemo.R;
 import com.example.newsclientdemo.adapter.ContentFragmentAdapter;
@@ -27,7 +28,7 @@ public class BaseFragment extends Fragment{
     private ContentFragmentAdapter mContentFragmentAdapter;
 
     private List<NewsFragment> mContentFragmentList = new ArrayList<NewsFragment>();
-
+    private TextView mTitle;
 
     @Nullable
     @Override
@@ -36,6 +37,8 @@ public class BaseFragment extends Fragment{
         initFragmentArrayList();
         initTitleList();
         initTabLayout(view);
+        mTitle= (TextView) view.findViewById(R.id.title_tv);
+        mTitle.setText("新闻专场");
         return view;
     }
 

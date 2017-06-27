@@ -44,22 +44,6 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tv_home:
-                goTo(MainActivity.class);
-                break;
-
-            case R.id.tv_bbs:
-                goTo(ReadActivity.class);
-                break;
-
-
-            case R.id.tv_play:
-                goTo(VideoActivity.class);
-                break;
-            case R.id.tv_my:
-                goTo(MyActivity.class);
-                break;
-        }
+        
     }
 }
